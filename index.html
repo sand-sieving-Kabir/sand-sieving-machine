@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor-Driven Sand Sieving Machine | Engineering Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #f97316;
+            --primary-dark: #c2410c;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background-color: #f1f5f9; color: var(--dark); line-height: 1.6; }
+        header { background: var(--dark); color: white; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        header h1 { font-size: 1.5rem; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        .hero { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18f86f6?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; padding: 6rem 5%; text-align: center; }
+        .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; color: #fff; }
+        .hero h2 span { color: var(--primary); }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem; color: #cbd5e1; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+        .btn:hover { background: var(--primary-dark); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--dark); position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--primary); margin: 10px auto 0; border-radius: 2px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: center; }
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .specs-table th, .specs-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        .specs-table th { background: var(--dark); color: white; }
+        .specs-table tr:hover { background: #f8fafc; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .gallery-item { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .gallery-item img { width: 100%; height: 280px; object-fit: contain; background: #fff; padding: 10px; border-bottom: 1px solid var(--border); }
+        .gallery-item .content { padding: 1.5rem; }
+        .gallery-item h3 { margin-bottom: 0.50rem; color: var(--dark); }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        @media(max-width: 768px) { .hero h2 { font-size: 2rem; } nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><i class="fa-solid fa-gear"></i> Sand Sieving Machine</h1>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#specs">Specifications</a>
+            <a href="#drawings">CAD & Design</a>
+            <a href="#components">Components</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Motor-Driven <span>Sand Sieving Machine</span></h2>
+        <p>An efficient automated mechanical solution designed for fast, high-volume sand screening in construction and industrial applications, minimizing manual labor[cite: 2].</p>
+        <a href="#drawings" class="btn">Explore CAD Designs</a>
+    </section>
+
+    <div class="container" id="overview">
+        <h2 class="section-title">Project Overview</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3 style="margin-bottom: 1rem; color: var(--primary);">Introduction</h3>
+                <p>Manual sand sieving is time-consuming and labor-intensive. This Motor-Driven Sand Sieving Machine utilizes a motorized mechanism with a rotary/oscillatory drum sieve to quickly separate fine sand from gravel and debris[cite: 2].</p>
+                <br>
+                <p>Designed completely in SolidWorks[cite: 1], this project focuses on structural stability[cite: 1, 2], efficient power transmission via V-belts[cite: 2], and robust sheet-metal discharge chutes[cite: 2].</p>
+            </div>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem; color: var(--primary);">Key Benefits</h3>
+                <ul style="list-style-type: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 10px;">
+                    <li>High screening efficiency and output rate[cite: 2].</li>
+                    <li>Reduces physical fatigue and manual labor costs[cite: 2].</li>
+                    <li>Sturdy frame constructed for durability on construction sites[cite: 1, 2].</li>
+                    <li>Smooth belt-pulley power transmission system[cite: 2].</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="specs" style="background: #e2e8f0; max-width: 100%;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Technical Specifications</h2>
+            <table class="specs-table">
+                <tr>
+                    <th>Parameter / Feature</th>
+                    <th>Specification Value</th>
+                </tr>
+                <tr>
+                    <td>Total Machine Height</td>
+                    <td>753.00 mm[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td>Base Frame Length</td>
+                    <td>1040.00 mm[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td>Sieve Drum Diameter</td>
+                    <td>600.00 mm[cite: 1]</td>
+                </tr>
+                <tr>
+                    <td>Drive System</td>
+                    <td>Electric Motor, Pulleys & V-Belt[cite: 2]</td>
+                </tr>
+                <tr>
+                    <td>Material Handling</td>
+                    <td>Construction Sand Screening[cite: 2]</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container" id="drawings">
+        <h2 class="section-title">SolidWorks CAD & Visuals</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="image_d8ea22.jpg" alt="Engineering 2D Drawing">
+                <div class="content">
+                    <h3>2D Engineering Drawing</h3>
+                    <p>Detailed multi-view orthographic drawing displaying key dimensions, clearances, and tolerances (Height: 753.00 mm, Length: 1040.00 mm)[cite: 1].</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Isometric.jpg" alt="3D Isometric Assembly">
+                <div class="content">
+                    <h3>3D Isometric Assembly</h3>
+                    <p>Complete SolidWorks 3D model showing the structural frame, motor mounting, pulley-belt transmission, sieve drum, and discharge chute[cite: 2].</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="components">
+        <h2 class="section-title">Main Machine Components</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3><i class="fa-solid fa-cube" style="color: var(--primary);"></i> Structural Frame</h3>
+                <p>Constructed using strong metal profiles to ensure overall machine stability[cite: 1, 2] and absorb vibrational loads during high-speed sieving operations.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-bolt" style="color: var(--primary);"></i> Motor & V-Belt Drive</h3>
+                <p>An electric motor drives the pulley system connected via a durable V-belt[cite: 2], transferring rotational power smoothly to the mechanism[cite: 2].</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-filter" style="color: var(--primary);"></i> Sieve Drum</h3>
+                <p>A perforated cylindrical mesh drum[cite: 1, 2] where raw sand is fed, separating coarse gravel from usable fine sand.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-signs-post" style="color: var(--primary);"></i> Discharge Chute</h3>
+                <p>An inclined sheet-metal chute that collects and guides the sieved sand cleanly out of the machine[cite: 2].</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Motor-Driven Sand Sieving Machine Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
