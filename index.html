@@ -18,8 +18,8 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
         body { background-color: #f1f5f9; color: var(--dark); line-height: 1.6; }
         header { background: var(--dark); color: white; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        header h1 { font-size: 1.4rem; color: var(--primary); display: flex; align-items: center; gap: 10px; }
-        nav a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; transition: color 0.3s; font-size: 0.9rem; }
+        header h1 { font-size: 1.3rem; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        nav a { color: white; text-decoration: none; margin-left: 12px; font-weight: 500; transition: color 0.3s; font-size: 0.85rem; }
         nav a:hover { color: var(--primary); }
         .hero { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18f86f6?auto=format&fit=crop&w=1920&q=80') center/cover; color: white; padding: 6rem 5%; text-align: center; }
         .hero h2 { font-size: 2.6rem; margin-bottom: 1rem; color: #fff; }
@@ -52,8 +52,8 @@
         <h1><i class="fa-solid fa-gear"></i> Sand Sieving Machine</h1>
         <nav>
             <a href="#overview">Overview</a>
-            <a href="#motor">Motor Selection</a>
-            <a href="#working">Working</a>
+            <a href="#motor">Motor & Design</a>
+            <a href="#evaluation">Evaluation</a>
             <a href="#specs">Specs</a>
             <a href="#drawings">CAD Design</a>
             <a href="#fabrication">Fabrication</a>
@@ -80,40 +80,45 @@
         </div>
     </div>
 
-    <!-- NEW MOTOR SELECTION SECTION -->
     <div class="container" id="motor" style="background: #e2e8f0; max-width: 100%;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 class="section-title">Motor Selection & Drive Calculations</h2>
+            <h2 class="section-title">Motor Selection & Design Suitability</h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3 style="margin-bottom: 0.8rem; color: var(--primary);"><i class="fa-solid fa-bolt"></i> Power & Torque Rating</h3>
-                    <p>The electric motor is chosen based on the estimated torque required to rotate a fully loaded sieve drum ($D = 600\text{ mm}$)[cite: 1] overcoming aggregate friction and rotational inertia.</p>
+                    <h3 style="margin-bottom: 0.8rem; color: var(--primary);"><i class="fa-solid fa-bolt"></i> Power & Torque</h3>
+                    <p>Electric motor and pulleys are configured to overcome aggregate friction and rotation resistance across a 600 mm diameter drum[cite: 1, 2].</p>
                 </div>
                 <div class="card">
-                    <h3 style="margin-bottom: 0.8rem; color: var(--primary);"><i class="fa-solid fa-rotate"></i> Velocity Ratio & Speed Reduction</h3>
-                    <p>Utilizing a V-belt and pulley system[cite: 2], high motor RPM is efficiently stepped down to an optimal low drum rotation speed, ensuring smooth continuous separation without aggregate clogging.</p>
+                    <h3 style="margin-bottom: 0.8rem; color: var(--primary);"><i class="fa-solid fa-bullseye"></i> Why Most Suitable?</h3>
+                    <p>Rotary trommel design offers continuous feeding, self-clearing action, and compact structure (1040 mm length) ideal for site mobility[cite: 1, 2].</p>
                 </div>
                 <div class="card">
-                    <h3 style="margin-bottom: 0.8rem; color: var(--primary);"><i class="fa-solid fa-shield-halved"></i> Operational Efficiency</h3>
-                    <p>Ensures high mechanical reliability, stable power transmission under continuous load, and low energy consumption suited for site work.</p>
+                    <h3 style="margin-bottom: 0.8rem; color: var(--primary);"><i class="fa-solid fa-rotate"></i> Speed Reduction</h3>
+                    <p>V-belt drive reduces high motor RPM to optimum drum rotation speed, preventing aggregate clogging and ensuring smooth throughput[cite: 2].</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container" id="working">
-        <h2 class="section-title">Working Principle & Methodology</h2>
+    <!-- NEW EVALUATION SECTION (ADVANTAGES & DISADVANTAGES) -->
+    <div class="container" id="evaluation">
+        <h2 class="section-title">Advantages & Limitations</h2>
         <div class="grid-2">
             <div class="card">
-                <h3 style="margin-bottom: 1rem; color: var(--primary);">Power Transmission Flow</h3>
-                <p>The electric motor delivers rotational output to the drive pulley. Through a reliable V-belt mechanism, motion is smoothly transferred to the driven assembly[cite: 2], inducing stable rotational and oscillatory movement across the sieve drum.</p>
+                <h3 style="margin-bottom: 1rem; color: var(--primary);"><i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Key Advantages</h3>
+                <ul style="list-style-type: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 10px;">
+                    <li><strong>High Throughput:</strong> Screens significantly larger volumes of sand per hour compared to manual methods[cite: 2].</li>
+                    <li><strong>Ergonomic Relief:</strong> Greatly eliminates physical strain, back injuries, and fatigue for workers[cite: 2].</li>
+                    <li><strong>Consistent Grading:</strong> Uniform separation of fine sand from stones and debris using structured mesh[cite: 1, 2].</li>
+                    <li><strong>Cost-Effective:</strong> Fabricated using accessible mild steel profiles ensuring long-term durability[cite: 1, 2].</li>
+                </ul>
             </div>
             <div class="card">
-                <h3 style="margin-bottom: 1rem; color: var(--primary);">Screening & Separation</h3>
-                <ul style="list-style-type: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
-                    <li><strong>Feed Phase:</strong> Raw sand is loaded into the rotating mesh drum[cite: 1, 2].</li>
-                    <li><strong>Sieving:</strong> Fines fall through the perforations while stones move forward.</li>
-                    <li><strong>Discharge:</strong> Filtered sand slides cleanly via the sheet-metal chute into collection bins[cite: 2].</li>
+                <h3 style="margin-bottom: 1rem; color: var(--primary);"><i class="fa-solid fa-circle-xmark" style="color: #ef4444;"></i> Operational Limitations</h3>
+                <ul style="list-style-type: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 10px;">
+                    <li><strong>Power Dependency:</strong> Requires an external electric power source or generator supply on-site.</li>
+                    <li><strong>Moisture Sensitivity:</strong> Excessively wet or clay-heavy sand can cause temporary mesh clogging inside the drum.</li>
+                    <li><strong>Bulk Material Size:</strong> Oversized stones beyond intake limits require preliminary manual sorting.</li>
                 </ul>
             </div>
         </div>
